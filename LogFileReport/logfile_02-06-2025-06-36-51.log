@@ -1,0 +1,21 @@
+2025-06-02 18:36:57 INFO  :326 - Start Clicking on (Login Button)
+2025-06-02 18:36:58 INFO  :331 - ( //button[@id='loginbtn'] )
+2025-06-02 18:36:58 INFO  :333 - Clicked on (Login Button)
+2025-06-02 18:36:58 INFO  :326 - Start Clicking on (UHID Radio Button)
+2025-06-02 18:36:58 INFO  :331 - ( //input[@id='radio2'] )
+2025-06-02 18:36:58 INFO  :333 - Clicked on (UHID Radio Button)
+2025-06-02 18:36:59 INFO  :362 - Start Entering...
+2025-06-02 18:36:59 INFO  :364 - //input[@id='txtUhid']: Input Data : (ISIC.100)
+2025-06-02 18:36:59 INFO  :370 - End Entering...
+2025-06-02 18:37:00 INFO  :362 - Start Entering...
+2025-06-02 18:37:00 INFO  :364 - //input[@id='txtPassword']: Input Data : (123)
+2025-06-02 18:37:00 INFO  :370 - End Entering...
+2025-06-02 18:37:00 INFO  :326 - Start Clicking on (Login Button)
+2025-06-02 18:37:02 INFO  :331 - ( //button[@id='btn_login'] )
+2025-06-02 18:37:02 INFO  :333 - Clicked on (Login Button)
+2025-06-02 18:37:03 INFO  :303 - Clicked on (Click on skip button.....)
+2025-06-02 18:37:04 INFO  :303 - Clicked on (Login and logout go to pre_registration page......)
+2025-06-02 18:37:06 INFO  :303 - Clicked on (Login and logout go to pre_registration page......)
+2025-06-02 18:37:07 INFO  :303 - Clicked on (Click on pre_registration....)
+2025-06-02 18:37:08 INFO  :303 - Clicked on (Verify mobile buttun)
+2025-06-02 18:37:17 INFO  :303 - Clicked on (Read And submit moblie otp password)

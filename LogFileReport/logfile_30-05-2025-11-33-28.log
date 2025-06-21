@@ -1,0 +1,23 @@
+2025-05-30 11:33:34 INFO  :326 - Start Clicking on (Login Button)
+2025-05-30 11:33:35 INFO  :331 - ( //button[@id='loginbtn'] )
+2025-05-30 11:33:35 INFO  :333 - Clicked on (Login Button)
+2025-05-30 11:33:35 INFO  :326 - Start Clicking on (UHID Radio Button)
+2025-05-30 11:33:35 INFO  :331 - ( //input[@id='radio2'] )
+2025-05-30 11:33:35 INFO  :333 - Clicked on (UHID Radio Button)
+2025-05-30 11:33:36 INFO  :362 - Start Entering...
+2025-05-30 11:33:36 INFO  :364 - //input[@id='txtUhid']: Input Data : (ISIC.100)
+2025-05-30 11:33:36 INFO  :370 - End Entering...
+2025-05-30 11:33:37 INFO  :362 - Start Entering...
+2025-05-30 11:33:37 INFO  :364 - //input[@id='txtPassword']: Input Data : (123)
+2025-05-30 11:33:37 INFO  :370 - End Entering...
+2025-05-30 11:33:37 INFO  :326 - Start Clicking on (Login Button)
+2025-05-30 11:33:39 INFO  :331 - ( //button[@id='btn_login'] )
+2025-05-30 11:33:39 INFO  :333 - Clicked on (Login Button)
+2025-05-30 11:33:40 INFO  :303 - Clicked on (Skip Button)
+2025-05-30 11:33:43 INFO  :303 - Clicked on (Registration Now Button)
+2025-05-30 11:34:05 INFO  :303 - Clicked on (Verify mobile buttun)
+2025-05-30 11:34:12 INFO  :303 - Clicked on (Submit moblie otp)
+2025-05-30 11:34:20 INFO  :303 - Clicked on (Click on verify emailid button )
+2025-05-30 11:34:28 INFO  :303 - Clicked on (Sumit email otp)
+2025-05-30 11:34:44 INFO  :303 - Clicked on (//button[@id='btnProceed'])
+2025-05-30 11:34:46 INFO  :303 - Clicked on (pre register no)

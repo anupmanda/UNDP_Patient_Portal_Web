@@ -1,0 +1,13 @@
+2025-06-01 18:41:21 INFO  :326 - Start Clicking on (Login Button)
+2025-06-01 18:41:22 INFO  :331 - ( //button[@id='loginbtn'] )
+2025-06-01 18:41:22 INFO  :333 - Clicked on (Login Button)
+2025-06-01 18:41:22 INFO  :326 - Start Clicking on (UHID Radio Button)
+2025-06-01 18:41:22 INFO  :331 - ( //input[@id='radio2'] )
+2025-06-01 18:41:22 INFO  :333 - Clicked on (UHID Radio Button)
+2025-06-01 18:41:23 INFO  :362 - Start Entering...
+2025-06-01 18:41:23 INFO  :364 - //input[@id='txtUhid']: Input Data : (ISIC.100)
+2025-06-01 18:41:23 INFO  :370 - End Entering...
+2025-06-01 18:41:24 INFO  :362 - Start Entering...
+2025-06-01 18:41:24 INFO  :364 - //input[@id='txtPassword']: Input Data : (123)
+2025-06-01 18:41:54 INFO  :376 - //input[@id='txtPassword']: Not able to locate web element...
+2025-06-01 18:41:54 INFO  :326 - Start Clicking on (Login Button)

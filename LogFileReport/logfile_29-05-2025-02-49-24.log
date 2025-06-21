@@ -1,0 +1,21 @@
+2025-05-29 14:49:31 INFO  :324 - Start Clicking on (Login Button)
+2025-05-29 14:49:31 INFO  :329 - ( //button[@id='loginbtn'] )
+2025-05-29 14:49:31 INFO  :331 - Clicked on (Login Button)
+2025-05-29 14:49:31 INFO  :324 - Start Clicking on (UHID Radio Button)
+2025-05-29 14:49:31 INFO  :329 - ( //input[@id='radio2'] )
+2025-05-29 14:49:31 INFO  :331 - Clicked on (UHID Radio Button)
+2025-05-29 14:49:32 INFO  :360 - Start Entering...
+2025-05-29 14:49:32 INFO  :362 - //input[@id='txtUhid']: Input Data : (ISIC.800)
+2025-05-29 14:49:32 INFO  :368 - End Entering...
+2025-05-29 14:49:33 INFO  :360 - Start Entering...
+2025-05-29 14:49:33 INFO  :362 - //input[@id='txtPassword']: Input Data : (123)
+2025-05-29 14:49:33 INFO  :368 - End Entering...
+2025-05-29 14:49:33 INFO  :324 - Start Clicking on (Login Button)
+2025-05-29 14:49:34 INFO  :329 - ( //button[@id='btn_login'] )
+2025-05-29 14:49:34 INFO  :331 - Clicked on (Login Button)
+2025-05-29 14:49:36 INFO  :301 - Clicked on (Skip)
+2025-05-29 14:49:42 INFO  :301 - Clicked on (Click on side icon reports)
+2025-05-29 14:49:46 INFO  :301 - Clicked on (Lab_Reports)
+2025-05-29 14:49:50 INFO  :301 - Clicked on (Diagnostic_Reports)
+2025-05-29 14:49:54 INFO  :301 - Clicked on (Discharge_summary)
+2025-05-29 14:49:58 INFO  :301 - Clicked on (vaccination_reports)

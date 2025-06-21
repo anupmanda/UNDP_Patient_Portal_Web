@@ -1,0 +1,439 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 15,
+        "name": "To post the request and verify the response with expected data",
+        "description": "",
+        "id": "post-the-request-and-verify-the-response;to-post-the-request-and-verify-the-response-with-expected-data;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 745900085,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "URL for api response",
+            "match": {
+              "location": "RestAPIDemo.url_for_api_response()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2949437966,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User pass header as a \"header1\" name as \"Anil\" and surname as \"Kumar\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "header1",
+                  "offset": 23
+                },
+                {
+                  "val": "Anil",
+                  "offset": 41
+                },
+                {
+                  "val": "Kumar",
+                  "offset": 63
+                }
+              ],
+              "location": "RestAPIDemo.user_pass_header_as_a_name_as_and_surname_as(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3517354,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User should be able to see success code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_success_code_as(int)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5176576,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be able to see header as \"header1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "header1",
+                  "offset": 38
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_header_as(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 130978,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User should be able to see name as \"Anil\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Anil",
+                  "offset": 36
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_name_as(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 84550,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User should be able to see surname as \"Kumar\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Kumar",
+                  "offset": 39
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_surname_as(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "To post the request and verify the response with expected data",
+        "description": "",
+        "id": "post-the-request-and-verify-the-response;to-post-the-request-and-verify-the-response-with-expected-data;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 42030,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "URL for api response",
+            "match": {
+              "location": "RestAPIDemo.url_for_api_response()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1188408906,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User pass header as a \"header2\" name as \"Mohit\" and surname as \"Mair\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "header2",
+                  "offset": 23
+                },
+                {
+                  "val": "Mohit",
+                  "offset": 41
+                },
+                {
+                  "val": "Mair",
+                  "offset": 64
+                }
+              ],
+              "location": "RestAPIDemo.user_pass_header_as_a_name_as_and_surname_as(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 144662,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User should be able to see success code as \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 44
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_success_code_as(int)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 454514,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should be able to see header as \"header2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "header2",
+                  "offset": 38
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_header_as(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 86993,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User should be able to see name as \"Mohit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Mohit",
+                  "offset": 36
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_name_as(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 72331,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User should be able to see surname as \"Mair\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Mair",
+                  "offset": 39
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_surname_as(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "line": 22,
+        "name": "To post the request and verify the response with expected data",
+        "description": "",
+        "id": "post-the-request-and-verify-the-response;to-post-the-request-and-verify-the-response-with-expected-data;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 31279,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "URL for api response",
+            "match": {
+              "location": "RestAPIDemo.url_for_api_response()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1307229222,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User pass header as a \"header1\" name as \"Anil\" and surname as \"Kumar\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "header1",
+                  "offset": 23
+                },
+                {
+                  "val": "Anil",
+                  "offset": 41
+                },
+                {
+                  "val": "Kumar",
+                  "offset": 63
+                }
+              ],
+              "location": "RestAPIDemo.user_pass_header_as_a_name_as_and_surname_as(String,String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1020946,
+              "error_message": "java.lang.AssertionError: expected:\u003c200\u003e but was:\u003c404\u003e\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\r\n\tat org.junit.Assert.assertEquals(Assert.java:118)\r\n\tat org.junit.Assert.assertEquals(Assert.java:555)\r\n\tat org.junit.Assert.assertEquals(Assert.java:542)\r\n\tat com.test.stepDefination.RestAPIDemo.user_should_be_able_to_see_success_code_as(RestAPIDemo.java:62)\r\n\tat ✽.Then User should be able to see success code as \"404\"(Feature/RestAPITestScenarioOutline.feature:7)\r\n",
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "User should be able to see success code as \"404\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 44
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_success_code_as(int)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "User should be able to see header as \"header1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "header1",
+                  "offset": 38
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_header_as(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "User should be able to see name as \"Anil\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Anil",
+                  "offset": 36
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_name_as(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "User should be able to see surname as \"Kumar\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Kumar",
+                  "offset": 39
+                }
+              ],
+              "location": "RestAPIDemo.user_should_be_able_to_see_surname_as(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "post the request and verify the response",
+    "description": "",
+    "id": "post-the-request-and-verify-the-response",
+    "keyword": "Feature",
+    "uri": "Feature/RestAPITestScenarioOutline.feature"
+  }
+]

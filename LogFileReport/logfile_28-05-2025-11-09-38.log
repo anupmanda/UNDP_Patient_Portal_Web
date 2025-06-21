@@ -1,0 +1,16 @@
+2025-05-28 11:09:43 INFO  :324 - Start Clicking on (Login Button)
+2025-05-28 11:09:45 INFO  :329 - ( //button[@id='loginbtn'] )
+2025-05-28 11:09:45 INFO  :331 - Clicked on (Login Button)
+2025-05-28 11:09:45 INFO  :324 - Start Clicking on (UHID Radio Button)
+2025-05-28 11:09:45 INFO  :329 - ( //input[@id='radio2'] )
+2025-05-28 11:09:45 INFO  :331 - Clicked on (UHID Radio Button)
+2025-05-28 11:09:46 INFO  :360 - Start Entering...
+2025-05-28 11:09:46 INFO  :362 - //input[@id='txtUhid']: Input Data : (ISIC.100)
+2025-05-28 11:09:47 INFO  :368 - End Entering...
+2025-05-28 11:09:47 INFO  :360 - Start Entering...
+2025-05-28 11:09:47 INFO  :362 - //input[@id='txtPassword']: Input Data : (123)
+2025-05-28 11:09:48 INFO  :368 - End Entering...
+2025-05-28 11:09:48 INFO  :324 - Start Clicking on (Login Button)
+2025-05-28 11:09:49 INFO  :329 - ( //button[@id='btn_login'] )
+2025-05-28 11:09:49 INFO  :331 - Clicked on (Login Button)
+2025-05-28 11:09:50 INFO  :301 - Clicked on (Skip Button)

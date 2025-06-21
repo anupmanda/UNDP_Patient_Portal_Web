@@ -1,0 +1,44 @@
+{
+	"gid": 102,
+	"companyID": 121,
+	"defaultActionID": 444,
+	"names": {
+		"firstName": "Anil",
+		"lastName": "Kumar"
+	},
+	"address": {
+		"city": "Bangalore",
+		"state": "KA",
+		"zipCode": "560037",
+		"addreess": "41 State Street"
+	},
+	"job": {
+		"departmentID": 102,
+		"jobTitleID": 100,
+		"hireDate": "1/02/2018"
+	},
+	"contact": {
+		"phoneHome": "773837329",
+		"email1": "info@INFO.com",
+		"phoneMobile": "080-787787832"
+	},
+	"login": {
+		"employeeID": "eID102",
+		"password": "password",
+		"superUser": true,
+		"lastLoginDate": "1/12/2007",
+		"text": "text",
+		"regexp": {},
+		"date": {}
+	},
+	"comment": {
+		"PCDATA": "comment"
+	},
+	"roles": [{
+			"role": 102
+		},
+		{
+			"role": 103
+		}
+	]
+}

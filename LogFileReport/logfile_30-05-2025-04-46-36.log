@@ -1,0 +1,21 @@
+2025-05-30 16:46:42 INFO  :326 - Start Clicking on (Login Button)
+2025-05-30 16:46:42 INFO  :331 - ( //button[@id='loginbtn'] )
+2025-05-30 16:46:42 INFO  :333 - Clicked on (Login Button)
+2025-05-30 16:46:42 INFO  :326 - Start Clicking on (UHID Radio Button)
+2025-05-30 16:46:43 INFO  :331 - ( //input[@id='radio2'] )
+2025-05-30 16:46:43 INFO  :333 - Clicked on (UHID Radio Button)
+2025-05-30 16:46:43 INFO  :362 - Start Entering...
+2025-05-30 16:46:43 INFO  :364 - //input[@id='txtUhid']: Input Data : (ISIC.100)
+2025-05-30 16:46:44 INFO  :370 - End Entering...
+2025-05-30 16:46:45 INFO  :362 - Start Entering...
+2025-05-30 16:46:45 INFO  :364 - //input[@id='txtPassword']: Input Data : (123)
+2025-05-30 16:46:45 INFO  :370 - End Entering...
+2025-05-30 16:46:45 INFO  :326 - Start Clicking on (Login Button)
+2025-05-30 16:46:48 INFO  :331 - ( //button[@id='btn_login'] )
+2025-05-30 16:46:48 INFO  :333 - Clicked on (Login Button)
+2025-05-30 16:46:49 INFO  :303 - Clicked on (Click all notification skip button)
+2025-05-30 16:46:54 INFO  :303 - Clicked on (Click on side iocn external document button )
+2025-05-30 16:46:58 INFO  :303 - Clicked on (Click and open new document pop.)
+2025-05-30 16:47:09 INFO  :303 - Clicked on (Fille uploaded)
+2025-05-30 16:47:16 INFO  :303 - Clicked on (Click on view page.)
+2025-05-30 16:47:22 INFO  :303 - Clicked on (Click on Download page)

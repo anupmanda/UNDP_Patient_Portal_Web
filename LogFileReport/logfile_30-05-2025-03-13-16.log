@@ -1,0 +1,24 @@
+2025-05-30 15:13:22 INFO  :326 - Start Clicking on (Login Button)
+2025-05-30 15:13:22 INFO  :331 - ( //button[@id='loginbtn'] )
+2025-05-30 15:13:22 INFO  :333 - Clicked on (Login Button)
+2025-05-30 15:13:22 INFO  :326 - Start Clicking on (UHID Radio Button)
+2025-05-30 15:13:22 INFO  :331 - ( //input[@id='radio2'] )
+2025-05-30 15:13:22 INFO  :333 - Clicked on (UHID Radio Button)
+2025-05-30 15:13:23 INFO  :362 - Start Entering...
+2025-05-30 15:13:23 INFO  :364 - //input[@id='txtUhid']: Input Data : (ISIC.100)
+2025-05-30 15:13:23 INFO  :370 - End Entering...
+2025-05-30 15:13:24 INFO  :362 - Start Entering...
+2025-05-30 15:13:24 INFO  :364 - //input[@id='txtPassword']: Input Data : (123)
+2025-05-30 15:13:24 INFO  :370 - End Entering...
+2025-05-30 15:13:24 INFO  :326 - Start Clicking on (Login Button)
+2025-05-30 15:13:27 INFO  :331 - ( //button[@id='btn_login'] )
+2025-05-30 15:13:27 INFO  :333 - Clicked on (Login Button)
+2025-05-30 15:13:27 INFO  :303 - Clicked on (Skip Button)
+2025-05-30 15:13:30 INFO  :303 - Clicked on (Click On Side Icon Manage Family Member)
+2025-05-30 15:13:36 INFO  :303 - Clicked on (Click add New Family Member Buttom)
+2025-05-30 15:13:40 INFO  :303 - Clicked on (Click on add profile pop)
+2025-05-30 15:13:44 INFO  :362 - Start Entering...
+2025-05-30 15:13:44 INFO  :364 - //input[@id='phoneNumberField']: Input Data : (9876543210)
+2025-05-30 15:13:44 INFO  :370 - End Entering...
+2025-05-30 15:13:48 INFO  :303 - Clicked on (Click On OTP Button)
+2025-05-30 15:13:57 INFO  :303 - Clicked on (otpSubmit)
