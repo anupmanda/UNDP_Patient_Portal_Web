@@ -24,13 +24,18 @@ import com.test.ui.helper.CommanUtill;
 public class DbConnectionManageFamily extends GeneralBrowserSetting {
 
 	public String connectAndFetchSMSManageFamily() {
-		String url = "jdbc:sqlserver://103.234.185.88:2499;databaseName=UNDP_TestingNew;encrypt=true;trustServerCertificate=true";
-
-		String username = "sa";
-		String password = "ServerAdmin@123";
+		
+		String url = "jdbc:sqlserver://206.19.38.9:1444;instanceName=SQLSERVER2022;databaseName=HISTreeUNDP_UAT;encrypt=true;trustServerCertificate=true;";
+		String username = "devuser2025";
+		 String password = "$devuser2025";
+		
+		//String url = "jdbc:sqlserver://103.234.185.88:2499;databaseName=UNDP_TestingNew;encrypt=true;trustServerCertificate=true";
+		//String username = "sa";
+		//String password = "ServerAdmin@123";
 		String otp = null;
 
-		try (Connection con = DriverManager.getConnection(url, username, password);
+		 try (Connection con = DriverManager.getConnection(url, username, password);
+		
 				Statement stmt = con.createStatement()) {
 
 			ResultSet rs = stmt.executeQuery(

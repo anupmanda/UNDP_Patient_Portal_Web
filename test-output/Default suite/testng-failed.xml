@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.testng.test.DoctorAppointmentTest">
+      <class name="com.test.testng.test.RegisterTestPageExample">
         <methods>
-          <include name="closeBroser"/>
+          <include name="createAppointmentTC"/>
           <include name="reportclosewindows"/>
-          <include name="checkApponintmentHistory"/>
-          <include name="PatientAppointment"/>
+          <include name="registerNow"/>
           <include name="launchBrowser"/>
           <include name="launch"/>
         </methods>
-      </class> <!-- com.test.testng.test.DoctorAppointmentTest -->
+      </class> <!-- com.test.testng.test.RegisterTestPageExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

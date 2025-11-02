@@ -80,12 +80,22 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-
+		
+<!-- Use an older version compatible with Java 8-->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.141.59</version> <!-- Use an older version compatible with Java 8 -->
+			<version>3.141.59</version> 
 		</dependency>
+		
+		
+<!-- Use an new version compatible.seleniumhq.selenium/selenium-java 
+     <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+             <version>4.35.0</version>
+      </dependency>
+-->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
@@ -279,5 +289,10 @@
          <scope>compile</scope>
   </dependency>
 
+    <dependency>
+    	<groupId>com.triotree</groupId>
+    	<artifactId>his</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
 	</dependencies>
 </project>

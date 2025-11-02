@@ -12,6 +12,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -55,7 +57,6 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class CommanUtill extends GeneralBrowserSetting {
-	
 
 	public String createfolder() throws IOException{
 
@@ -248,8 +249,6 @@ public class CommanUtill extends GeneralBrowserSetting {
 		}    
 	}
 
-
-
 	// Close All the windows function
 	public void closeallwindow(WebDriver driver) throws IOException, InterruptedException
 	{
@@ -283,7 +282,59 @@ public class CommanUtill extends GeneralBrowserSetting {
 			//e.printStackTrace();
 		}
 
-	}   
+	}  
+	
+	//****************************************************************add 07-10-2025
+	
+	// Common highlight method (for click, text, dropdown)
+	public static void highlightElement(WebElement element, String color) {
+	    try {
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("arguments[0].style.border='3px solid " + color + "'", element);
+	        Thread.sleep(250);
+	        js.executeScript("arguments[0].style.border=''", element);
+	    } catch (Exception e) {
+	        System.out.println("Highlight failed: " + e.getMessage());
+	    }
+	}
+
+	
+	public static void clickFunction(String xmlPath, String fieldName) throws IOException, InterruptedException
+	{
+	    try
+	    {
+	        System.out.println("Start Clicking on (" +fieldName+ ")");
+	        logger.log(Status.INFO, "Start Clicking on (" +fieldName+ ")");
+	        passedScreenShotPics(driver);		//Capturing Screenshot
+	        WebElement element = driver.findElement(By.xpath(xmlPath));
+	        highlightElement(element, "yellow");
+	        element.click();
+	        passedScreenShotPics(driver);		//Capturing Screenshot
+	        Thread.sleep(300);
+	        System.out.println("XPath-->> (" +xmlPath+ " )");
+	        logger.log(Status.INFO, "( " +xmlPath +" )");
+	        System.out.println("Clicked on (" +fieldName+ ")");
+	        logger.log(Status.INFO, "Clicked on (" +fieldName+ ")");
+	        log.info("Clicked on (" +fieldName+ ")");
+	        Thread.sleep(300);
+	    }
+	    catch (Exception E)
+	    {   
+	        System.out.println(xmlPath +": Not able to locate web element for field (" +fieldName+ ")");
+	        logger.log(Status.INFO, xmlPath +": Not able to locate web element...");
+	        failureScreenShotPics(driver);		//Capturing Screenshot
+	        logger.log(Status.FAIL, xmlPath +": Not able to locate web element for field (" +fieldName+ ")");
+	        System.out.println("Error while Clicking on the web element... " +E.getMessage());
+	        Assert.fail("Error while Clicking on the web element... ");
+	    }  
+	}
+
+	
+	//***************************************************************
+	
+	
+	
+/*
 
 	// Normal click function with field description
 	public static void clickFunction(String xmlPath, String fieldName) throws IOException, InterruptedException
@@ -316,6 +367,8 @@ public class CommanUtill extends GeneralBrowserSetting {
 			Assert.fail("Error while Clicking on the web element... ");
 		}  
 	}
+	
+	*/
 	
 	// Normal click function with field description
 	public static void click(String xmlPath, String fieldName) throws IOException, InterruptedException
@@ -1732,6 +1785,46 @@ public class CommanUtill extends GeneralBrowserSetting {
 			}
 		}
 	}
+	
+	 
+	 public static boolean isElementPresent(String xpath) {
+		    try {
+		        return driver.findElement(By.xpath(xpath)).isDisplayed();
+		    } catch (NoSuchElementException e) {
+		        return false;
+		    }
+		}
+
+	/**
+	 * @param cell
+	 */
+	public static void scrollIntoView(WebElement cell) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static String randomAlphabets(int length) {
+		
+        String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            sb.append(letters.charAt(random.nextInt(letters.length())));
+        }
+        return sb.toString();
+    }
+
+    public static String randomDigits(int length) {
+    	
+        String digits = "0123456789";
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            sb.append(digits.charAt(random.nextInt(digits.length())));
+        }
+        return sb.toString();
+    }
+
 }
 
 

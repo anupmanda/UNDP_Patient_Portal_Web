@@ -6,11 +6,9 @@ package com.test.testng.test;
 import java.io.IOException;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.test.browser.setup.GeneralBrowserSetting;
-import com.test.readdata.ExcelSheetData;
+import com.test.browser.setup.ExcelSheetData;
 import com.test.testng.page.RegisterPageExample;
 
 /**

@@ -19,68 +19,70 @@ import com.test.ui.helper.CommanUtill;
 /**
  * @author Anup
  *
- *         27-May-202
+ *         27-May-2025
  * 
  */
 
 public class DBConnectionPre_Registration extends GeneralBrowserSetting {
+	
+	 private static final String url = "jdbc:sqlserver://206.19.38.11:1433;databaseName=HISTreeUNDP_UAT;encrypt=true;trustServerCertificate=true;";
+	    private static final String username = "devuser2025";
+	    private static final String password = "$devuser2025";
 
-	public String connectAndFetchSMS() {
+	    private String fetchOtpFromTable(String tableName, String filterColumn, String filterValue, String messageColumn) {
+	        String otp = null;
 
-		// Database connection
-		// String url =
-		// "jdbc:sqlserver://localhost:103.234.185.88:2499;databaseName=UNDP_TestingNew";
-		// String url =
-		// "jdbc:sqlserver://103.234.185.88:2499;databaseName=UNDP_TestingNew";
-		String url = "jdbc:sqlserver://103.234.185.88:2499;databaseName=UNDP_TestingNew;encrypt=true;trustServerCertificate=true";
+	        String query = "SELECT TOP 1 " + messageColumn + 
+	                       " FROM " + tableName +
+	                       " WHERE " + filterColumn + " LIKE '%" + filterValue + "%' " +
+	                       " ORDER BY ID DESC";
 
-		String username = "sa";
-		String password = "ServerAdmin@123";
-		String otp = null;
+	        try (Connection con = DriverManager.getConnection(url, username, password);
+	             Statement stmt = con.createStatement();
+	             ResultSet rs = stmt.executeQuery(query)) {
 
-		/*
-		 * try { Connection con = DriverManager.getConnection(url, username, password);
-		 * 
-		 * Statement stmt = con.createStatement(); // ResultSet rs =
-		 * stmt.executeQuery("SELECT * FROM D_SMS order by 1 desc"); ResultSet rs =
-		 * stmt.executeQuery("SELECT * FROM D_SMS where MobileNo like '98765439'");
-		 * 
-		 * while (rs.next()) {
-		 * 
-		 * System.out.println("Data: " + rs.getString("messageText"));
-		 * 
-		 * }
-		 * 
-		 * 
-		 * con.close(); } catch (Exception e) { e.printStackTrace(); } return password;
-		 * 
-		 * }
-		 */
+	            if (rs.next()) {
+	                String message = rs.getString(messageColumn);
+	                System.out.println("Full message from " + tableName + ": " + message);
 
-		try (Connection con = DriverManager.getConnection(url, username, password);
-				Statement stmt = con.createStatement()) {
+	                // Extract 4 to 6 digit OTP from the message text using regex
+	                java.util.regex.Matcher matcher = java.util.regex.Pattern.compile("\\b\\d{4,6}\\b").matcher(message);
+	                if (matcher.find()) {
+	                    otp = matcher.group();
+	                    System.out.println("Extracted OTP: " + otp);
+	                } else {
+	                    System.out.println("OTP not found in " + tableName + " message text.");
+	                }
+	            } else {
+	                System.out.println("No record found in " + tableName + " for " + filterColumn + " LIKE '%" + filterValue + "%'");
+	            }
 
-			ResultSet rs = stmt.executeQuery(
-					"SELECT TOP 1 [MessageText] AS messageText FROM D_SMS WHERE MobileNo LIKE '98765439%' ORDER BY ID DESC");
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	        return otp;
+	    }
 
-			if (rs.next()) {
-				String message = rs.getString("messageText");
-				System.out.println("Full message from DB: " + message);
+	    // Fetch latest OTP sent to given mobile number from D_SMS table
+	    public String connectAndFetchSMS(String mobileNo) {
+	        // Optional: small delay if OTP just generated to ensure DB record
+	        try {
+	            Thread.sleep(3000); 
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+	        return fetchOtpFromTable("D_SMS", "MobileNo", mobileNo, "MessageText");
+	    }
 
-				// Extract 4 or 6 digit OTP using regex
-				java.util.regex.Matcher matcher = java.util.regex.Pattern.compile("\\b\\d{4,6}\\b").matcher(message);
-				if (matcher.find()) {
-					otp = matcher.group();
-					System.out.println("Extracted OTP: " + otp);
-				}
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return otp;
-
-	}
+	    // Fetch latest OTP sent to given email ID from D_Email table
+	    public String connectAndFetchEmail(String emailId) {
+	        try {
+	            Thread.sleep(3000); 
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+	        return fetchOtpFromTable("D_Email", "ToEmailID", emailId, "BodyOfEmail");
+	    }
 
 	protected static String enter_mobile = "//input[@id='txtMobileNo']";
 	protected static String Verify_mobile = "//button[@id='btnVerifyMobile']";
@@ -90,66 +92,62 @@ public class DBConnectionPre_Registration extends GeneralBrowserSetting {
 	protected static String verify_email = "//button[@id='btnVerifyEmail']";
 	protected static String email_submit_otp = "//button[@id='VerifyEmailOTP']";
 
-	public void enterMobileNumber1(String mobile) throws IOException, InterruptedException {
+	public void enterMobileNumberAndVerifyBtn(String mobile , String verify_mobile_no) throws IOException, InterruptedException {
 
 		WebElement m = driver.findElement(By.xpath(enter_mobile));
-		m.click();
 		m.sendKeys(mobile);
-
+		CommanUtill.clickFunction(Verify_mobile, verify_mobile_no);
 	}
 
-	public void clickOnVerifyMobileButton(String mob_verify) throws IOException, InterruptedException {
-
-		CommanUtill.clickFunction(Verify_mobile, mob_verify);
-
-	}
-
-	public void enterMobileOtpVerify1(String MOBILEOTP) throws IOException, InterruptedException {
+	public void enterMobileOTPBox(String MOBILEOTP) throws IOException, InterruptedException {
 
 		WebElement otp1 = driver.findElement(By.xpath("//input[@id='MOTP1']"));
 		WebElement otp2 = driver.findElement(By.xpath("//input[@id='MOTP2']"));
 		WebElement otp3 = driver.findElement(By.xpath("//input[@id='MOTP3']"));
 		WebElement otp4 = driver.findElement(By.xpath("//input[@id='MOTP4']"));
+		WebElement otp5 = driver.findElement(By.xpath("//input[@id='MOTP5']"));
+		WebElement otp6 = driver.findElement(By.xpath("//input[@id='MOTP6']"));
 		otp1.sendKeys(MOBILEOTP);
 		otp2.sendKeys(MOBILEOTP);
 		otp3.sendKeys(MOBILEOTP);
 		otp4.sendKeys(MOBILEOTP);
+		otp5.sendKeys(MOBILEOTP);
+		otp6.sendKeys(MOBILEOTP);
 
 	}
 
-	public void clickSubmitMobileOtpPop1(String filedName) throws IOException, InterruptedException {
+	public void clickSubmitMobileOtpPopup(String filedName) throws IOException, InterruptedException {
 
 		CommanUtill.clickFunction(mobile_submit_otp, filedName);
 
 	}
 
-	public void enterEmailID1(String emailid) throws IOException, InterruptedException {
+	public void enterEmailIDAndVerifyBtn(String enter_emailid, String email_verify_button) throws IOException, InterruptedException {
 
-		CommanUtill.textEnter(enter_emailId, emailid);
-		driver.findElement(By.xpath(enter_emailId)).click();
-
-	}
-
-	public void clickOnVerifyEmailButton1(String email_verify_button) throws IOException, InterruptedException {
-
+		CommanUtill.textEnter(enter_emailId, enter_emailid);
+		Thread.sleep(300);		
 		CommanUtill.clickFunction(verify_email, email_verify_button);
 
 	}
 
-	public void enterOTPOnEmailIdVerify1(String EmailOTP) throws IOException, InterruptedException {
+	public void enterOTPOnEmailIdBox(String EmailOTP) throws IOException, InterruptedException {
 
 		WebElement otp1 = driver.findElement(By.xpath("//input[@id='EOTP1']"));
 		WebElement otp2 = driver.findElement(By.xpath("//input[@id='EOTP2']"));
 		WebElement otp3 = driver.findElement(By.xpath("//input[@id='EOTP3']"));
 		WebElement otp4 = driver.findElement(By.xpath("//input[@id='EOTP4']"));
+		WebElement otp5 = driver.findElement(By.xpath("//input[@id='EOTP5']"));
+		WebElement otp6 = driver.findElement(By.xpath("//input[@id='EOTP6']"));
 		otp1.sendKeys(EmailOTP);
 		otp2.sendKeys(EmailOTP);
 		otp3.sendKeys(EmailOTP);
 		otp4.sendKeys(EmailOTP);
+		otp5.sendKeys(EmailOTP);
+		otp6.sendKeys(EmailOTP);
 
 	}
 
-	public void clickSubmitEmailOtpPop1(String email_submit) throws IOException, InterruptedException {
+	public void clickSubmitEmailOtpPopup(String email_submit) throws IOException, InterruptedException {
 
 		CommanUtill.clickFunction(email_submit_otp, email_submit);
 

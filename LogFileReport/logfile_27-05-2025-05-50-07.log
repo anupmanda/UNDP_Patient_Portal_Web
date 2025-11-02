@@ -1,6 +1,0 @@
-2025-05-27 05:50:17 INFO  :324 - Start Clicking on (Login Button)
-2025-05-27 05:50:20 INFO  :329 - ( //button[@id='loginbtn'] )
-2025-05-27 05:50:20 INFO  :331 - Clicked on (Login Button)
-2025-05-27 05:50:20 INFO  :324 - Start Clicking on (UHID Radio Button)
-2025-05-27 05:50:21 INFO  :329 - ( //input[@id='radio2'] )
-2025-05-27 05:50:21 INFO  :331 - Clicked on (UHID Radio Button)

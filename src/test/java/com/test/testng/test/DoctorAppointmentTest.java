@@ -6,8 +6,10 @@ package com.test.testng.test;
 import java.io.IOException;
 
 import org.apache.commons.compress.archivers.dump.InvalidFormatException;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.test.readdata.ExcelSheetDataProvider;
 import com.test.testng.page.DoctorAppointmentPage;
 
 /**
@@ -18,38 +20,44 @@ import com.test.testng.page.DoctorAppointmentPage;
    public class DoctorAppointmentTest extends DoctorAppointmentPage {
 	 
 	   public DoctorAppointmentPage patientAppointment = new DoctorAppointmentPage();
-	   
-	   
-	   @Test(priority = 1)
-	   public void PatientAppointment() throws IOException, InterruptedException, InvalidFormatException{
+	   private final String sheetName = "Create_Appointment";
+
+	    @DataProvider(name = "ExcelUniversalDataProvider")
+	    public Object[][] getData() throws IOException {
+	        return ExcelSheetDataProvider.getExcelData(sheetName);
+	    }
+
+      @Test(dataProvider = "ExcelUniversalDataProvider")    
+	   public void PatientAppointment(String facility_drp, String department_drp, String doctor_name , String appointment_date) 
+			   throws IOException, InterruptedException, InvalidFormatException{
 		   
 		  logger = extent.createTest("Doctor appointment", "This is the doctor appointment page.");
 		  
-		 patientAppointment.clickSkipButton("Skip");
+		 patientAppointment.clickSkipButton("Skip Button");
 		// patientAppointment.createAppointment();
 		 Thread.sleep(300);
-		 patientAppointment.clickOnDcoctorAppointmentButton("Appointment Booking On Side Icon");
+		 patientAppointment.clickOnDcoctorAppointmentButton("Appointment Booking On Side Icon Button");
 		 Thread.sleep(300);
 		 patientAppointment.clickOnCreateAppointmentButton("create_Appointment");
 		 Thread.sleep(3000);
-		 patientAppointment.selectFacilitySelectDropDwon("Victoria Hospital");
-		 patientAppointment.selectDepartmentSelectDropDwon("Cardiology");
+		 patientAppointment.selectFacilitySelectDropDwon(facility_drp);
+		 patientAppointment.selectDepartmentSelectDropDwon(department_drp);
 		 Thread.sleep(200);
-		 patientAppointment.selectDoctorSelectDropDwon("1174");
-		//patientAppointment.selectDoctorSelectDropDwon("Dr. Dharwal  Himanshu");
-		 patientAppointment.enterDate("14-06-2025");
+		// patientAppointment.selectDoctorSelectDropDwon(doctor_name);
+		 patientAppointment.enterDate(appointment_date);
+	
+		//patientAppointment.clickViewButton("test");
+		patientAppointment.clickViewButtonAndWait();
 		 Thread.sleep(500);
-		 patientAppointment.clickViewButton("test");
-		 Thread.sleep(500);
-		 patientAppointment.clickOnSelectTimeSlots();
-		 Thread.sleep(300);
+		// patientAppointment.selectFirstAvailableGreenSlot();
+		/*Thread.sleep(300);
 		 patientAppointment.clickAppointmentProced("Date picker Conformation button ");
 		 Thread.sleep(300);
 		 patientAppointment.clickOkPopAppointment("Conformation Ok Button");
-		 	 
+		*/ 	 
 	   }
 	   
-	   @Test(priority = 2)
+	//   @Test(priority = 2)
 	  public void checkApponintmentHistory() throws IOException, InterruptedException, InvalidFormatException{
 		   
 		  Thread.sleep(2000);

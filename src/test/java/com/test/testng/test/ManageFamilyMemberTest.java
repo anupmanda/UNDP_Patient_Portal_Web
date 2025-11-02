@@ -24,7 +24,7 @@ public class ManageFamilyMemberTest extends ManageFamilyMemberPage {
 	public void connectAndFetchSMSManageFamily() throws IOException, InterruptedException {
 
 		logger = extent.createTest("Manage Family Member page ", "This is the Manage Family Member DB Connection get OTP Password.");
-		db.enterMoblieManageFamilyDb("9876543210");
+		db.enterMoblieManageFamilyDb("4133309");
 		Thread.sleep(3000);
 		db.clickOnOtpButtonManageFamliyDb("Click on Otp button....");
 

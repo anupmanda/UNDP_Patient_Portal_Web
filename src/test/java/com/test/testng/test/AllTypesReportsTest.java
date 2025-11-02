@@ -41,6 +41,4 @@ public class AllTypesReportsTest extends AllTypesReportsPage {
     	 
     	
  	}
-
-
 }

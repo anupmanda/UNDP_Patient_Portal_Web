@@ -16,6 +16,7 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
@@ -35,7 +36,7 @@ import lombok.extern.slf4j.Slf4j;
 public class GeneralBrowserSetting extends Reports {
 
 	@SuppressWarnings("static-access")
-	@BeforeClass
+	@BeforeMethod
 	public static void launchBrowser() throws IOException, InterruptedException {
 		//this is for logger file read and config...
 		LOG_STATUS = readPropertiesFileData("LOG_FILE_STATUS");
@@ -142,7 +143,7 @@ public class GeneralBrowserSetting extends Reports {
 		CommanUtill.click("//button[@id='btn_login']", "Login Button");
 	}
 
-	@AfterClass
+	//@AfterMethod
 	public static void closeBroser() throws InterruptedException {
 		Thread.sleep(5000);
 		driver.quit();
