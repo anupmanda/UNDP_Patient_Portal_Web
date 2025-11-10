@@ -1,0 +1,16 @@
+2025-11-10 12:25:06 INFO  :379 - Start Clicking on (Login Button)
+2025-11-10 12:25:07 INFO  :384 - ( //button[@id='loginbtn'] )
+2025-11-10 12:25:07 INFO  :386 - Clicked on (Login Button)
+2025-11-10 12:25:07 INFO  :379 - Start Clicking on (UHID Radio Button)
+2025-11-10 12:25:08 INFO  :384 - ( //input[@id='radio2'] )
+2025-11-10 12:25:08 INFO  :386 - Clicked on (UHID Radio Button)
+2025-11-10 12:25:08 INFO  :415 - Start Entering...
+2025-11-10 12:25:08 INFO  :417 - //input[@id='txtUhid']: Input Data : (SAJH.1)
+2025-11-10 12:25:09 INFO  :423 - End Entering...
+2025-11-10 12:25:10 INFO  :415 - Start Entering...
+2025-11-10 12:25:10 INFO  :417 - //input[@id='txtPassword']: Input Data : (123)
+2025-11-10 12:25:10 INFO  :423 - End Entering...
+2025-11-10 12:25:10 INFO  :379 - Start Clicking on (Login Button)
+2025-11-10 12:25:13 INFO  :384 - ( //button[@id='btn_login'] )
+2025-11-10 12:25:13 INFO  :386 - Clicked on (Login Button)
+2025-11-10 12:25:14 INFO  :318 - Clicked on (Click on skip button.....)
