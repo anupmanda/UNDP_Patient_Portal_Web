@@ -1,0 +1,11 @@
+com\test\browser\setup\Setup.class
+com\test\browser\setup\GeneralBrowserSetting.class
+com\test\readdata\ReadPropertiesFileData.class
+com\test\ui\helper\CommanUtill.class
+com\test\readdata\ExcelSheetData.class
+com\test\readdata\ExcelSheetDataProvider$1.class
+com\test\browser\setup\BrowserSetup.class
+com\test\readdata\ReadJsonData.class
+com\test\browser\setup\ExcelSheetData.class
+com\test\readdata\ExcelSheetDataProvider.class
+com\test\report\Reports.class

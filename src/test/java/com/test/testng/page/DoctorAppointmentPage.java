@@ -146,6 +146,7 @@ public class DoctorAppointmentPage extends GeneralBrowserSetting {
 
 		    // Wait for popup visible (Selenium 3 style)
 		    WebDriverWait wait = new WebDriverWait(driver, 10);
+
 		    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("openpopupapptRU")));
 		}
 	

@@ -1,0 +1,8 @@
+2025-11-09 10:05:53 INFO  :379 - Start Clicking on (Login Button)
+2025-11-09 10:06:01 INFO  :384 - ( //button[@id='loginbtn'] )
+2025-11-09 10:06:01 INFO  :386 - Clicked on (Login Button)
+2025-11-09 10:06:01 INFO  :379 - Start Clicking on (UHID Radio Button)
+2025-11-09 10:06:02 INFO  :384 - ( //input[@id='radio2'] )
+2025-11-09 10:06:02 INFO  :386 - Clicked on (UHID Radio Button)
+2025-11-09 10:06:02 INFO  :415 - Start Entering...
+2025-11-09 10:06:02 INFO  :417 - //input[@id='txtUhid']: Input Data : (SAJH.1)

@@ -2,25 +2,34 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>WebAutomationI_UI_Project</groupId>
-	<artifactId>WebAutomationI_UI_Project</artifactId>
+	<groupId>PAS_UNDP_Automation_Project</groupId>
+	<artifactId>PAS_UNDP_Automation_Project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>WebAutomationI_UI_Project</name>
 	<url>http://maven.apache.org</url>
 
+	<!-- ✅ Updated properties for Java 23 -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
 		<version.cucumber>3.0.2</version.cucumber>
 	</properties>
 
 	<build>
 		<plugins>
+
+			<!--  Updated compiler plugin for Java 23 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.7.0</version>
+				<version>3.11.0</version>
+				<configuration>
+					<source>21</source>
+					<target>21</target>
+				</configuration>
 			</plugin>
 
 			<plugin>
@@ -67,6 +76,7 @@
 	</build>
 
 	<dependencies>
+<!-- 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit-dep</artifactId>
@@ -74,67 +84,37 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-		
-<!-- Use an older version compatible with Java 8-->
+-->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.141.59</version> 
+			<version>3.141.59</version>
 		</dependency>
-		
-		
-<!-- Use an new version compatible.seleniumhq.selenium/selenium-java 
-     <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-             <version>4.35.0</version>
-      </dependency>
--->
+<!-- update 5.0.3 -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>5.0.3</version> <!-- Ensure compatibility with the Selenium version -->
+			<version>5.9.2</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.17.0</version>
 		</dependency>
-		
-		<!-- <dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>browserwatcher</artifactId>
-			<version>1.0.0</version>
-		</dependency>
- -->
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<!-- <dependency> <groupId>org.seleniumhq.selenium</groupId> <artifactId>selenium-java</artifactId> 
-			<version>4.0.0-alpha-2</version> </dependency> -->
 
-
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-core -->
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-core</artifactId>
 			<version>1.2.5</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>1.2.5</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-junit</artifactId>
@@ -142,7 +122,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm-deps -->
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-jvm-deps</artifactId>
@@ -150,14 +129,6 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
-		<!-- <dependency>
-			<groupId>net.masterthought</groupId>
-			<artifactId>maven-cucumber-reporting</artifactId>
-			<version>3.18.0</version>
-		</dependency> -->
-
-		<!-- https://mvnrepository.com/artifact/info.cukes/gherkin -->
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>gherkin</artifactId>
@@ -165,7 +136,6 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
@@ -173,7 +143,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/cobertura/cobertura -->
 		<dependency>
 			<groupId>cobertura</groupId>
 			<artifactId>cobertura</artifactId>
@@ -198,7 +167,6 @@
 			<version>22.0</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
@@ -211,88 +179,77 @@
 			<version>3.0.3</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.json/json -->
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20090211</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
 			<artifactId>json-simple</artifactId>
 			<version>1.1.1</version>
 		</dependency>
+		
+ <!-- update testng 6.9.10-->
+		
+      <dependency>
+          <groupId>org.testng</groupId>
+          <artifactId>testng</artifactId>
+          <version>7.10.2</version>
+      </dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.9.10</version>
-			<scope>test</scope>
-		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml-schemas</artifactId>
 			<version>3.17</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.17</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>2.0.0-alpha0</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+<!--   update  ompatible with Java 1.18.8-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.8</version>
+			<version>1.18.32</version>      
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
 		<dependency>
 			<groupId>com.google.inject</groupId>
 			<artifactId>guice</artifactId>
 			<version>4.0</version>
 		</dependency>
 
-		<!-- This is for log generating in console log.info("Test") -->
-		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-simple</artifactId> 
-			<version>1.7.21</version> </dependency> -->
-
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>3.17</version>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc    Anup-->  
-    <dependency>
-         <groupId>com.microsoft.sqlserver</groupId>
-         <artifactId>mssql-jdbc</artifactId>
-         <version>12.10.0.jre11</version>
-         <scope>compile</scope>
-  </dependency>
 
-    <dependency>
-    	<groupId>com.triotree</groupId>
-    	<artifactId>his</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
+		<!-- SQL Server JDBC -->
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>12.10.0.jre11</version>
+			<scope>compile</scope>
+		</dependency>
+<!--
+		<dependency>
+			<groupId>com.triotree</groupId>
+			<artifactId>his</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+ -->
 	</dependencies>
 </project>

@@ -21,7 +21,7 @@ import com.test.ui.helper.CommanUtill;
  */
 public class PreRegisterPage extends GeneralBrowserSetting {
 
-	//protected static String profile_click = "//img[@src='/eHealth_Portal_Performance/images/profileUser.png']";
+	
 	protected static String profile_click = "//div[@id='viewfamily_div']";
 	protected static String logout = "//a[@id='btn_login']";
 	protected static String registerNowButtonLink = "//button[@id='btnregister']";
@@ -191,7 +191,7 @@ public class PreRegisterPage extends GeneralBrowserSetting {
 
 		CommanUtill.dropdownSelectByVisibleText(district, district_drp);
 		CommanUtill.dropdownSelectByVisibleText(city_Town_Village, city_Town_Village_drp);
-		CommanUtill.dropdownSelectByVisibleText(locality, locality_drp);
+		//CommanUtill.dropdownSelectByVisibleText(locality, locality_drp);
 
 	}
 	public void selectByCountrydrp(String country_drp) throws IOException, InterruptedException {

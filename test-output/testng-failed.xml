@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.testng.test.RegisterTestPageExample">
+      <class name="com.test.testng.test.PatientPreRegisterTest_1">
         <methods>
-          <include name="createAppointmentTC"/>
+          <include name="fetchSMSDataFromDB" invocation-numbers="0"/>
           <include name="reportclosewindows"/>
-          <include name="registerNow"/>
           <include name="launchBrowser"/>
           <include name="launch"/>
         </methods>
-      </class> <!-- com.test.testng.test.RegisterTestPageExample -->
+      </class> <!-- com.test.testng.test.PatientPreRegisterTest_1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

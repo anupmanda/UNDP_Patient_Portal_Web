@@ -1,32 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="13" parallel="tests" name="PPW">
-	<test thread-count="13" parallel="tests" name="Test">
-		<classes>
-			<class name="com.test.testng.test.LoginWithNicIdTest" />
-			<class name="com.test.testng.test.LoginOtpWithMobileNoTest" />
-			<class name="com.test.testng.test.ProfileEditeTest" />
-			<class name="com.test.testng.test.PreRegisterTestPage" />
-			<class name="com.test.testng.test.PatientExternalDocumentTest" />
-			<class name="com.test.testng.test.PrescriptionTest" />
-			<class name="com.test.testng.test.PatientVitalAndTrackerTest" />
-			<class name="com.test.testng.test.ManageFamilyMemberTest" />
-			<class name="com.test.testng.test.ViewPatientBillTest" />
-			<class name="com.test.testng.test.DoctorAppointmentTest" />
-			<class name="com.test.testng.test.PatientEducationDocumentTest" />
-			<class name="com.test.testng.test.PatientFeedbackTest" />
-			
-			<class name="com.test.testng.test.InvalidLoginWithNicIdTest" />
-			<class name="com.test.testng.test.InvalidTestCasePre_Registration" />
-			<class name="com.test.testng.test.InvalidManageFamilyMemberInMobileNoTest" />
-			<class name="com.test.testng.test.InvalidManageFamilyMemberWithUHIDTest" />
-			
-		</classes>
-	</test> <!--
-	Test -->
-</suite> <!--
-PPW -->
-
-
-
-
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.test.testng.test.PatientFeedbackTest"/>
+      <class name="com.test.testng.test.PatientPreRegisterTest_1"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
